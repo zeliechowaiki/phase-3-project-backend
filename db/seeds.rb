@@ -15,7 +15,7 @@ puts "🌱 Seeding spices..."
     name: Faker::Name.name,
     username: Faker::Twitter.screen_name,
     password: Faker::Internet.password,
-    money: rand(50..5000)
+    money: rand(75000..6000000)
   )
 end
   Item.create(name:"Original script from The Godfather",image:"https://media.lasvegassun.com/media/img/photos/2011/10/05/scaled.1005_web_godfather_script001_t320.JPG?0f3ddbed359eab2c0b293f3dd101a0fde643f8b3condition",category:"film",condition:"used",starting_price:5000)
@@ -27,7 +27,6 @@ end
   Item.create(name:"Batman #1",image:"https://www.sellmycomicbooks.com/images/xbatman-comics-1.jpg.pagespeed.ic.Eama7mHuS2.jpg",category:"comic books",condition:"used",starting_price:80000)
   Item.create(name:"Salvatore Dali Armchair sculpture",image:"https://a.1stdibscdn.com/armchair-sculpture-by-salvador-dali-for-sale/1121189/f_241511021623771127288/24151102_master.jpg?disable=upscale&auto=webp&quality=60&width=960",category:"art",condition:"used",starting_price:25000)
   Item.create(name:"Louis Vuitton 1920's era Steamer Trunk",image:"https://a.1stdibscdn.com/louis-vuitton-steamer-trunk-wardrobe-trunk-chest-france-circa-1920-for-sale/1121189/f_171759421576054055194/17175942_master.jpeg?disable=upscale&auto=webp&quality=60&width=960",category:"antique",condition:"used",starting_price:15000)
-  Item.create(name:"Apple-1 Computer",image:"https://i.guim.co.uk/img/media/f5c5457b0bccf73f39a31c8d9b7ee8a16342922d/0_154_4096_2459/master/4096.jpg?width=620&quality=85&auto=format&fit=max&s=88bf6dbf4b5e17b90d7ea94a4abc76ed",category:"technology",condition:"used",starting_price:85000)
   Item.create(name:"Apple-1 Computer",image:"https://i.guim.co.uk/img/media/f5c5457b0bccf73f39a31c8d9b7ee8a16342922d/0_154_4096_2459/master/4096.jpg?width=620&quality=85&auto=format&fit=max&s=88bf6dbf4b5e17b90d7ea94a4abc76ed",category:"technology",condition:"used",starting_price:85000)
 
 
