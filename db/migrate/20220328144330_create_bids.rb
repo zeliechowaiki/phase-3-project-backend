@@ -4,7 +4,7 @@ class CreateBids < ActiveRecord::Migration[6.1]
       t.integer :bid_amount
       t.integer :user_id
       t.integer :item_id
-      t.timestamps
+      t.datetime :created_at
     end
   end
 end
