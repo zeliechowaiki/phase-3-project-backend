@@ -5,7 +5,9 @@ puts "🌱 Seeding spices..."
     name: Faker::Device.model_name,
     category: "tech",
     condition: "good",
-    starting_price: rand(20..300)
+    starting_price: rand(20..300),
+    open: true,
+    auction_end: DateTime.now()+rand(1..5).hours
   )
 end
 
@@ -27,7 +29,6 @@ Item.all.each do |item|
     user_id: rand(1..10),
     item_id: item.id
   )
-  end
 end
 
 

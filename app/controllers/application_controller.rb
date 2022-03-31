@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/items' do
-    items = Item.all
+    items = Item.all.order(:auction_end)
     items.to_json
   end
 
@@ -31,9 +31,27 @@ class ApplicationController < Sinatra::Base
     user.to_json
   end
 
+  get '/bid_user/:id' do
+    bid = Bid.find(params[:id])
+    user = bid.user
+    user.to_json
+  end
+
+  get '/bid_item/:id' do
+    bid = Bid.find(params[:id])
+    item = bid.item
+    item.to_json
+  end
+
   get '/item_bids/:id' do
     item = Item.find(params[:id])
     bids = item.bids
+    bids.to_json
+  end
+
+  get '/user_bids/:id' do
+    user = User.find(params[:id])
+    bids = user.bids
     bids.to_json
   end
 
@@ -65,7 +83,22 @@ class ApplicationController < Sinatra::Base
   delete '/users/:id' do
     user = User.find(params[:id])
     user.destroy
+    user.bids.destroy_all
     user.to_json
+  end
+
+  delete '/user_bids/:id' do
+    user = User.find(params[:id])
+    bids = user.bids
+    bids.destroy_all
+    bids
+  end
+
+  delete '/item_bids/:id' do
+    item = Item.find(params[:id])
+    bids = item.bids
+    bids.destroy_all
+    bids
   end
 
   patch '/users/:id' do
@@ -74,10 +107,30 @@ class ApplicationController < Sinatra::Base
     user.to_json
   end
 
-  get '/user_bids/:id' do
+  get '/user_bids_sum/:id' do
     user = User.find(params[:id])
-    bids = user.bids.sum(:bid_amount)
+    bids = user.bids_list
     bids.to_json
+  end
+
+  patch '/items/:id' do
+    item = Item.find(params[:id])
+    item.update(open: params[:open])
+    item.close_auction
+    item.bids.last.to_json
+  end
+
+  post '/random_bid' do
+    randItemId = Item.all.where(open: true).sample.id
+    current_account_id = params[:current_account_id]
+    randUserId = User.all.where.not(id: current_account_id).sample.id
+    randBid = Item.find(randItemId).bids.last.bid_amount + rand(5..100)
+    bid = Bid.create(
+      bid_amount: randBid,
+      user_id: randUserId,
+      item_id: randItemId
+    )
+    bid.to_json
   end
 
 end

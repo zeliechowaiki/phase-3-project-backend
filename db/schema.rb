@@ -16,8 +16,7 @@ ActiveRecord::Schema.define(version: 2022_03_28_144330) do
     t.integer "bid_amount"
     t.integer "user_id"
     t.integer "item_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at"
   end
 
   create_table "items", force: :cascade do |t|
@@ -25,6 +24,8 @@ ActiveRecord::Schema.define(version: 2022_03_28_144330) do
     t.string "category"
     t.string "condition"
     t.integer "starting_price"
+    t.boolean "open"
+    t.datetime "auction_end"
   end
 
   create_table "users", force: :cascade do |t|
