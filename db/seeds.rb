@@ -16,16 +16,16 @@ Item.create(
   condition:"used",
   starting_price:5000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"1932 Ford Roadster Model B",
   image:"https://static0.srcdn.com/wordpress/wp-content/uploads/2019/03/1932-Ford-Roadster-history.jpg?q=50&fit=crop&w=740&h=416&dpr=1.5",
-  category:"auto"
+  category:"historical",
   condition:"used",
   starting_price:55000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"Faberge Spider Brooch",
@@ -34,16 +34,16 @@ Item.create(
   condition:"used",
   starting_price:40000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"Jimi Hendrix's 1963 Fender Stratocaster Guitar",
   image:"https://static3.srcdn.com/wordpress/wp-content/uploads/2019/03/1963-Fender-Stratocaster-guitar.jpg?q=50&fit=crop&w=740&h=554&dpr=1.5",
-  category:"music",
+  category:"art",
   condition:"used",
   starting_price:100000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"The last violin played on the Titanic",
@@ -52,7 +52,7 @@ Item.create(
   condition:"used",
   starting_price:27500,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"Cave Cay (Island, Bahamas)",
@@ -61,34 +61,34 @@ Item.create(
   condition:"new",
   starting_price:10000000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"Batman #1",
   image:"https://www.sellmycomicbooks.com/images/xbatman-comics-1.jpg.pagespeed.ic.Eama7mHuS2.jpg",
-  category:"collectibles",
+  category:"memorabilia",
   condition:"used",
   starting_price:80000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
-  name:"Salvatore Dali Armchair sculpture",i
-  mage:"https://a.1stdibscdn.com/armchair-sculpture-by-salvador-dali-for-sale/1121189/f_241511021623771127288/24151102_master.jpg?disable=upscale&auto=webp&quality=60&width=960",
+  name:"Salvatore Dali Armchair sculpture",
+  image:"https://a.1stdibscdn.com/armchair-sculpture-by-salvador-dali-for-sale/1121189/f_241511021623771127288/24151102_master.jpg?disable=upscale&auto=webp&quality=60&width=960",
   category:"art",
   condition:"used",
   starting_price:25000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"Louis Vuitton 1920's era Steamer Trunk",
   image:"https://a.1stdibscdn.com/louis-vuitton-steamer-trunk-wardrobe-trunk-chest-france-circa-1920-for-sale/1121189/f_171759421576054055194/17175942_master.jpeg?disable=upscale&auto=webp&quality=60&width=960",
-  category:"antique",
+  category:"historical",
   condition:"used",
   starting_price:15000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"Apple-1 Computer",
@@ -97,16 +97,16 @@ Item.create(
   condition:"used",
   starting_price:85000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"Tiffany & Co. Antique 18k Pocket Watch",
   image:"https://cdn.shopify.com/s/files/1/1227/9946/products/DSC_0698_63901b88-c974-42ee-aba8-b750777f45b7_1024x1024.JPG?v=1565716046",
-  category:"jewelry",
+  category:"art",
   condition:"used",
   starting_price:30000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"Al Capone owned Colt .45 Pistol",
@@ -115,16 +115,16 @@ Item.create(
   condition:"used",
   starting_price:15000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"1986 Nintendo Super Mario Bros",
   image:"https://static01.nyt.com/images/2021/04/03/multimedia/03xp-mario-image/03xp-mario-image-mobileMasterAt3x.jpg",
-  category:"collectibles",
+  category:"memorabilia",
   condition:"new",
   starting_price:500000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 Item.create(
   name:"Vincent van Gogh original L/'allée des Alyscamps ",
@@ -133,7 +133,7 @@ Item.create(
   condition:"new",
   starting_price:16000000,
   open: true,
-  auction_end: DateTime.now()+rand(1..5).hours
+  auction_end: DateTime.now()+rand(1..3).hours
 )
 
 Item.all.each do |item|

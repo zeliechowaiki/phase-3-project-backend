@@ -117,7 +117,7 @@ class ApplicationController < Sinatra::Base
     item = Item.find(params[:id])
     item.update(open: params[:open])
     item.close_auction
-    item.bids.last.to_json
+    item.bids.last.user.to_json
   end
 
   post '/random_bid' do
