@@ -74,7 +74,7 @@ Item.create(
 )
 Item.create(
   name:"Salvatore Dali Armchair sculpture",
-  image:"https://raw.githubusercontent.com/zeliechowaiki/phase-3-project-backend/main/cropped-photos/item-images/cropped%20photos/Dali-armchair.jpg",
+  image:"Dali-armchair.jpg",
   category:"art",
   condition:"used",
   starting_price:25000,
