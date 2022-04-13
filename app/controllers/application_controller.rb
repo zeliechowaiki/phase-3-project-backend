@@ -123,7 +123,7 @@ class ApplicationController < Sinatra::Base
   post '/random_bid' do
     randItemId = Item.all.where(open: true).sample.id
     current_account_id = params[:current_account_id]
-    randUserId = User.all.where.not(id: current_account_id).sample.id
+    randUserId = rand(1..10)
     randBid = Item.find(randItemId).bids.last.bid_amount + rand(5..100)
     bid = Bid.create(
       bid_amount: randBid,

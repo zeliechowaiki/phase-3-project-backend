@@ -25,20 +25,7 @@ Item.create(
   condition:"used",
   starting_price:55000,
   open: true,
-<<<<<<< HEAD
-  auction_end: DateTime.now()+rand(1..3).hours
-)
-Item.create(
-  name:"Faberge Spider Brooch",
-  image:"Spider brooch.jpg",
-  category:"jewelry",
-  condition:"used",
-  starting_price:40000,
-  open: true,
-  auction_end: DateTime.now()+rand(1..3).hours
-=======
   auction_end: DateTime.now()+rand(1..10).minutes
->>>>>>> Zelie
 )
 # Item.create(
 #   name:"Faberge Spider Brooch",
@@ -150,7 +137,7 @@ Item.create(
 )
 Item.create(
   name:"Rangyai Island (Thailand)",
-  image:"https://content.phuket101.net/wp-content/uploads/20200618225319/rang-yai-island-1.jpg",
+  image:"rang-yai-island-1.jpg",
   category:"real estate",
   condition:"used",
   starting_price:95000000,
@@ -159,7 +146,7 @@ Item.create(
 )
 Item.create(
   name:"Mounu Island Resort (Tonga)",
-  image:"https://www.privateislandsonline.com/uploads/resize/_1454_587fc4291df23.jpg-1360-1100.jpg",
+  image:"island1.jpg",
   category:"real estate",
   condition:"used",
   starting_price:75000000,
@@ -168,7 +155,7 @@ Item.create(
 )
 Item.create(
   name:"Koro Levu Island (Fiji)",
-  image:"https://www.privateislandsonline.com/uploads/resize/_2173_58c1c43450f73.jpg-1360-1100.jpg",
+  image:"island2.jpg",
   category:"real estate",
   condition:"used",
   starting_price:2750000,
